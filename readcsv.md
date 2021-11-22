@@ -8,12 +8,12 @@ I first began to work with CSV files when taking the backend portion of my softw
  
 CSV stands for comma-separated values, and files containing the `.csv` extension contain a collection of comma-separated values used to store data.
  
-In this tutorial we will be using the public `Beach Water Quality` data set stored in the `bwq.csv` file. You can obtain the file by downloading it from [Kaggle](https://www.kaggle.com/sveneschlbeck/chicago-beach-water-quality?select=bwq.csv), however, you should be able to read any csv file following the steps below.
+In this tutorial we will be using the public `Beach Water Quality` data set stored in the `bwq.csv` file. You can obtain the file by downloading it from [Kaggle](https://www.kaggle.com/sveneschlbeck/chicago-beach-water-quality?select=bwq.csv), however, you should be able to read any csv file following the instructions below.
 
 
 ## Read a CSV file using Python
 
-There are two common ways to read a `.csv` file when using Python. The first using the `csv` library, and the second using the `pandas` library.
+There are two common ways to read a `.csv` file when using Python. The first by using the `csv` library, and the second by using the `pandas` library.
 
 ### 1. Using the CSV Library
 
@@ -40,6 +40,7 @@ You should expect an output in the terminal to look something like this:
 
 ![python-terminal-output](dot-py-output.png)
 
+
 ### 2. Using the Pandas Library
 
 
@@ -58,9 +59,11 @@ You should expect the output to look something like this:
 
 ## Possible Delimiters Issues
 
-The majority of `csv` files are separated by commas, however, there are some that are separated by other characters like colons for example, which can output strange results in Python.
+The majority of `csv` files are separated by commas, however, there are some that are separated by other characters, like colons for example, which can output strange results in Python.
+
+### Solutioning for Delimiters Using the CSV Library
  
-To solution for this using the `csv` library, simply pass in the `delimiter= ':'` argument in the `reader()` method like so:
+To solution for delimiter issues using the `csv` library, simply pass in the `delimiter= ':'` argument in the `reader()` method like so:
 
 
 ```python
@@ -74,7 +77,12 @@ with open("./fileWithColonDelimeter.csv", 'r') as file:
 
 ```
 
-To solution for this during the read process using the `pandas` library, simply pass in the argument `delimiter= ':'` in the `read_csv()` method like so:
+For other edge cases in reading `csv` files using the `csv` library, check out [this page](https://docs.python.org/3/library/csv.html) in the Python docs.
+
+
+### Solutioning for Delimiters Using the Pandas Library
+
+To solution for delimiter issues using the `pandas` library, simply pass in the argument `delimiter= ':'` in the `read_csv()` method like so:
 
 ```python
 
@@ -84,14 +92,15 @@ data
 
 ```
 
-For other edge cases using the `csv` library, check out the [this page](https://docs.python.org/3/library/csv.html) in the Python docs or [this page](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html) the Pandas docs.
+ For other edge cases in reading `csv` files using the Pandas library check out[this page](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html) the Pandas docs.
 
 ## Up Next
 
 For a more in depth tutorial on what you can do after reading a `csv` file, check out [Plotting Precipitation with Python, Pandas and Matplotlib](https://earthly.dev/blog/plotting-rainfall-data-with-python-and-matplotlib/) by Alex Couture-Beil.
- 
-While you’re here:
+
+---
+**While you’re here:**
  
 [Earthly](https://earthly.dev/) is a syntax for defining your build. It works with your existing build system. Get repeatable and understandable builds today.
-
+---
 

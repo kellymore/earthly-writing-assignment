@@ -92,7 +92,7 @@ data
 
 ```
 
- For other edge cases in reading `csv` files using the Pandas library check out[this page](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html) the Pandas docs.
+ For other edge cases in reading `csv` files using the Pandas library check out [this page](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html) the Pandas docs.
 
 ## Up Next
 
